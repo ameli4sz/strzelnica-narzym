@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strzelnica Narzym</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <br />
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="nas.html">O NAS</a></li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="bron.html">BROŃ</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Jedyne takie miejsce w okolicy</h1>
+        <p>
+          które pozwoli Ci poczuć adrenalinę, precyzję i moc skupienia w
+          jednym.<br />
+          Strzelectwo to nie tylko sport - to pasja, której warto spróbować!
+        </p>
+        <br />
+        <a
+          href="https://www.instagram.com/explore/locations/507923389071429/strzelnica-narzym/"
+          class="hero-btn"
+          >Odwiedź nas, żeby dowiedzieć się więcej!</a
+        >
+      </div>
+    </section>
+
+    <script>
+      let navLinks = document.getElementById("navLinks");
+      let body = document.body;
+
+      function showMenu() {
+        navLinks.style.right = "0";
+        body.classList.add("menu-open");
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+        body.classList.remove("menu-open");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+/* -------------------- OGÓLNE -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+  width: 100%;
+  background: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- NAV -------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  height: 80px;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: white;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* -------------------- HAMBURGER -------------------- */
+nav .fa {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  nav img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+
+    right: -200px;
+    text-align: left;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .nav-links ul {
+    display: block;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 20px 0;
+  }
+
+  nav .fa {
+    display: block;
+    color: white;
+  }
+}
+
+/* --------------------BROŃ-------------------- */
+.content-section {
+  padding: 80px 6%;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+}
+
+.content-section h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.weapon-category {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.weapon-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: white;
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+}
+.weapon-category h3 i {
+  margin-right: 15px;
+  color: white;
+}
+
+.weapon-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.weapon-item {
+  flex-basis: calc(33.33% - 30px);
+  min-width: 250px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.weapon-item:hover {
+  transform: translateY(-5px);
+}
+
+.weapon-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.weapon-name {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* MEDIA QUERIES DLA BRONI */
+@media (max-width: 1000px) {
+  .weapon-item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .weapon-item {
+    flex-basis: 100%;
+  }
+  .content-section h2 {
+    font-size: 32px;
+  }
+}

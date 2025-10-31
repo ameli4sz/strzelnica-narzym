@@ -1,0 +1,266 @@
+/* -------------------- OGÓLNE -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: black;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- NAV -------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  height: 80px;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: white;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* -------------------- HAMBURGER -------------------- */
+nav .fa {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  nav img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .nav-links ul {
+    display: block;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 20px 0;
+  }
+
+  nav .fa {
+    display: block;
+    color: white;
+  }
+}
+
+.offer-section {
+  padding: 80px 6%;
+  text-align: center;
+}
+
+.offer-section h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.offer-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Kolumna z pakietami - LEWA */
+.packages-col {
+  flex-basis: 60%;
+  max-width: 600px;
+  min-width: 300px;
+  text-align: left;
+}
+
+.package-item {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border-left: 5px solid white;
+  transition: background 0.3s;
+}
+
+.package-item:hover {
+  background: #2a2a2a;
+}
+
+.package-item h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.package-item .price {
+  font-weight: 600;
+  color: white;
+}
+
+.package-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.package-item ul li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #333;
+}
+.package-item ul li:last-child {
+  border-bottom: none;
+}
+
+/* Kolumna z dodatkową amunicją i informacjami - PRAWA */
+.ammo-col {
+  flex-basis: 30%;
+  min-width: 250px;
+  background: #333;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ammo-col h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+.ammo-col h6 {
+  margin-top: 10px;
+  color: white;
+  font-weight: 400;
+}
+
+/* Styl dla tabeli amunicji */
+.ammo-col table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+  position: sticky;
+  top: 100px; /* Przyleganie pod nawigacją */
+}
+
+.ammo-col table td {
+  padding: 8px 0;
+  text-align: left;
+  border-bottom: 1px dashed #555;
+}
+
+.ammo-col table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: white;
+}
+
+.info-btn {
+  color: black;
+  background: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.info-btn:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.hero-btn-bottom:hover {
+  background: white;
+  color: black;
+  border: 1px solid white;
+}
+
+@media (max-width: 900px) {
+  .packages-col,
+  .ammo-col {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

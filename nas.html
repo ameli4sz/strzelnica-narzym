@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O NAS</title>
+    <link rel="stylesheet" href="nas.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="nas.html">O NAS</a></li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="bron.html">BROŃ</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <section class="content-section">
+        <h2>Nasza Pasja, Twoja Precyzja</h2>
+        <p>
+          Strzelnica Narzym powstała z głębokiej pasji do strzelectwa i sportów
+          obronnych. Jesteśmy dumni z tego, że stworzyliśmy miejsce, które łączy
+          profesjonalizm z przyjazną atmosferą. Nasz obiekt to idealne
+          środowisko dla każdego – od początkujących, stawiających pierwsze
+          kroki, po doświadczonych strzelców poszukujących wyzwań.
+        </p>
+
+        <div class="row">
+          <div class="content-col">
+            <h3><i class="fa fa-users"></i> Doświadczona Kadra</h3>
+            <p>
+              Nasi instruktorzy to pasjonaci z wieloletnim doświadczeniem w
+              strzelectwie sportowym i taktycznym. Zapewniamy szkolenia na
+              najwyższym poziomie, kładąc nacisk na bezpieczeństwo i prawidłową
+              technikę.
+            </p>
+          </div>
+          <div class="content-col">
+            <h3>
+              <i class="fa fa-shield-halved"></i> Bezpieczeństwo Priorytetem
+            </h3>
+            <p>
+              Kultura bezpieczeństwa jest u nas najważniejsza. Dbamy o to, by
+              każda sesja odbywała się zgodnie z rygorystycznymi procedurami,
+              gwarantując komfort i spokój wszystkim naszym gościom.
+            </p>
+          </div>
+          <div class="content-col">
+            <h3><i class="fa fa-location-dot"></i> Unikalne Położenie</h3>
+            <p>
+              Strzelnica jest położona z dala od miejskiego zgiełku, co pozwala
+              na pełne skupienie i odprężenie. Nasze otoczenie to idealne tło
+              dla treningu i rekreacji strzeleckiej.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-gallery">
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <img src="images/21.jpg" alt="Widok strzelnicy 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="images/22.jpg" alt="Widok strzelnicy 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="images/23.jpg" alt="Widok strzelnicy 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <script>
+      let navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

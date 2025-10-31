@@ -1,0 +1,182 @@
+/* -------------------- OGÓLNE -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("images/banner.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------- NAV -------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  height: 80px;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: white;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* -------------------- HERO TEXT -------------------- */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 90%;
+}
+
+.text-box h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.text-box p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 14px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 25px;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* -------------------- HAMBURGER -------------------- */
+nav .fa {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .text-box h1 {
+    font-size: 28px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav img {
+    width: 120px;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .nav-links ul {
+    display: block;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 20px 0;
+  }
+
+  nav .fa {
+    display: block;
+    color: white;
+  }
+
+  body.menu-open .text-box {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .text-box {
+    transition: opacity 0.4s ease;
+  }
+}
